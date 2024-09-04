@@ -1,0 +1,29 @@
+algoritmo "contar_letra_a"
+var
+   palavra: caractere
+   i: inteiro
+   contador_a: inteiro
+   letra_atual: caractere
+inicio
+   // Inicialização do contador
+   contador_a <- 0
+
+   // Leitura da palavra
+   escreva("Digite uma palavra: ")
+   leia(palavra)
+
+   // Loop para verificar cada caractere da palavra
+   para i de 1 ate comprimento(palavra) faca //fica aparecendo um erro nessa parte. já consultei online, usei pesquisa, mas nao consigo desemperrar essa parte.
+      letra_atual <- palavra[i] // Obtém o caractere na posição i
+      se (letra_atual = "a") ou (letra_atual = "A") então
+         contador_a <- contador_a + 1
+      fimse
+   fimpara
+
+   // Verificação da existência da letra 'a'
+   se contador_a > 0 então
+      escreva("A letra 'a' ocorre ", contador_a, " vez(es) na palavra.")
+   senao
+      escreva("A letra 'a' não ocorre na palavra.")
+   fimse
+fimalgoritmo
